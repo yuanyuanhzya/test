@@ -1,0 +1,204 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+
+/* Header栏样式 */
+.header {
+    background-color: #ff672b;
+    padding: 10px 0;
+}
+.header-nav {
+    text-align: right;
+    margin-right: 20px;
+}
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* 搜索栏样式 */
+.search-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff672b;
+    margin-right: 20px;
+}
+.search-box {
+    flex: 1;
+    display: flex;
+}
+.search-box input {
+    flex: 1;
+    height: 40px;
+    padding: 0 10px;
+    border: 2px solid #ff672b;
+    border-right: none;
+}
+.search-box button {
+    width: 80px;
+    background-color: #ff672b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* 快捷链接（热门商品）样式 */
+.quick-links-section {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    text-align: center; /* 让热门商品居中 */
+}
+.quick-links {
+    display: inline-flex; /* 改为inline-flex实现居中 */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* 增加间距 */
+}
+.quick-links a {
+    color: #666;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.quick-links a:hover {
+    color: #ff672b;
+}
+
+/* 主容器样式 */
+.main-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* 商品分类栏样式 */
+.category-section {
+    width: 200px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+    height: fit-content;
+}
+.category-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 一行两列 */
+    gap: 10px; /* 间距 */
+}
+.category-list a {
+    color: #666;
+    text-decoration: none;
+    padding: 8px 5px;
+    transition: all 0.3s;
+    border-radius: 4px;
+    text-align: center;
+}
+.category-list a:hover {
+    color: #ff672b;
+    background-color: #fff;
+}
+
+/* 商品展示栏样式 */
+.goods-section {
+    flex: 1;
+}
+.goods-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.goods-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.goods-item {
+    width: calc(25% - 15px);
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+}
+.goods-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.goods-item img {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+.goods-desc {
+    margin-bottom: 5px;
+    color: #333;
+    height: 40px;
+    overflow: hidden;
+}
+.goods-price {
+    color: #ff672b;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.goods-sales {
+    color: #999;
+    font-size: 14px;
+}
+
+/* 开发者信息栏样式 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.footer p {
+    margin-bottom: 5px;
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+    .goods-item {
+        width: calc(33.33% - 14px);
+    }
+}
+@media (max-width: 992px) {
+    .goods-item {
+        width: calc(50% - 10px);
+    }
+}
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .category-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .category-list {
+        grid-template-columns: repeat(4, 1fr); /* 移动端一行四列 */
+    }
+    .goods-item {
+        width: calc(50% - 10px);
+    }
+}
