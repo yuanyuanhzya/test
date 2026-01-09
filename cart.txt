@@ -1,0 +1,1 @@
+"cart_id"	"user_id"	"product_id"	"quantity"	"specifications"	"spec_hash"	"selected"	"create_time"	"update_time"
